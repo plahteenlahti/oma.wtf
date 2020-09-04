@@ -35,7 +35,7 @@ const IndexPage: FC<PageProps<Props>> = ({
 }) => {
   return (
     <>
-      <SEO title="OmaSovellus" />
+      <SEO title="Oma-sovellus jokaiselle" />
 
       <CoverContainer>
         <Cover fluid={cover} />
