@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `oma.wtf`,
+    description: `Lista Oma -alkuisista sovelluksista App Storessa. Oma-sovellus generaattori.`,
+    author: `@plahteenlahti`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -24,9 +24,40 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/icon.png`, // This path is relative to the root of the site.
       },
-    }, // this (optional) plugin enables Progressive Web App + Offline functionality
+    },
+    {
+      resolve: `gatsby-source-app-store`,
+      options: {
+        apps: [
+          "com.terveystalo.com.terveystalo.ajanvaraus",
+          "com.elisa.moesl",
+          "fi.itella.posti",
+          "com.fortum.FortumValpasMobile",
+          "fi.omasp.omavahvistus.prod",
+          "fi.riistakeskus.Riista",
+          "fi.omasp.mobile.bank",
+          "fi.mehilainen.mobileapp.prod",
+          "com.laakkonen.omalaakkonen",
+          "fi.helen.omahelenMobile",
+          "fi.dna.omadna",
+          "fi.ikaalistenmatkatoimisto.mobile",
+          "com.yonoton.onniravintolat",
+          "com.movendos.mclinic.ttaalto",
+          "com.movendos.mclinic.ttlaine",
+        ], // required
+        country: "fi", // optional, can affect the language of reviews
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`roboto`, `noto sans jp`],
+        display: "swap",
+      },
+    },
+    // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
     "gatsby-plugin-typescript",
