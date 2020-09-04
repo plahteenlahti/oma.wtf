@@ -41,9 +41,9 @@ const IndexPage: FC<PageProps<Props>> = ({
         <Cover fluid={cover} />
         <TextContainer>
           <H1>
-            <Strong>oma</Strong>.wtf
+            <Strong>oma</Strong>.wtf 🤔
           </H1>
-          <P>Oma-alkuisista sovelluksia, jotakin jokaiselle.t 📲</P>
+          <P>Oma-alkuisista sovelluksia, jotakin jokaiselle 📲</P>
         </TextContainer>
       </CoverContainer>
 
