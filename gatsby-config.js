@@ -51,6 +51,7 @@ module.exports = {
           "com.seure.omaseure",
           "fi.Tietotalo.GTK.Kivi.Mobile.iOS",
           "fi.omasp.yhteys",
+          "com.movendos.mclinic.ttfinla",
         ], // required
         country: "fi", // optional, can affect the language of reviews
       },
