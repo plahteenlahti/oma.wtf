@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `oma.wtf`,
-    description: `OmaOma. Oma -alkuisista sovelluksia, jotakin jokaiselle.`,
+    description: `OmaOma. Oma-alkuisista sovelluksia, jotakin jokaiselle.`,
     author: `@plahteenlahti`,
   },
   plugins: [
@@ -46,6 +46,11 @@ module.exports = {
           "com.yonoton.onniravintolat",
           "com.movendos.mclinic.ttaalto",
           "com.movendos.mclinic.ttlaine",
+          "com.fns.univet",
+          "no.enoro.KundeAppNGEFinland",
+          "com.seure.omaseure",
+          "fi.Tietotalo.GTK.Kivi.Mobile.iOS",
+          "fi.omasp.yhteys",
         ], // required
         country: "fi", // optional, can affect the language of reviews
       },
