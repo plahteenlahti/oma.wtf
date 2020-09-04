@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `oma.wtf`,
-    description: `Lista Oma -alkuisista sovelluksista App Storessa. Oma-sovellus generaattori.`,
+    description: `OmaOma. Oma -alkuisista sovelluksia, jotakin jokaiselle.`,
     author: `@plahteenlahti`,
   },
   plugins: [

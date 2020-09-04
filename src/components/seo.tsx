@@ -11,7 +11,14 @@ import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
 function SEO({ description, lang, meta, title }) {
-  const { site } = useStaticQuery(
+  const {
+    site,
+    card: {
+      childImageSharp: {
+        fixed: { src: card },
+      },
+    },
+  } = useStaticQuery(
     graphql`
       query {
         site {
@@ -19,6 +26,13 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
+          }
+        }
+        card: file(relativePath: { eq: "card.png" }) {
+          childImageSharp {
+            fixed(width: 1200) {
+              src
+            }
           }
         }
       }
@@ -52,8 +66,16 @@ function SEO({ description, lang, meta, title }) {
           content: `website`,
         },
         {
+          name: "og:image",
+          content: `https://oma.wtf${card}`,
+        },
+        {
           name: `twitter:card`,
-          content: `summary`,
+          content: `summary_large_image`,
+        },
+        {
+          name: `twitter:creator`,
+          content: site.siteMetadata.author,
         },
         {
           name: `twitter:creator`,
@@ -62,6 +84,10 @@ function SEO({ description, lang, meta, title }) {
         {
           name: `twitter:title`,
           content: title,
+        },
+        {
+          name: `twitter:image`,
+          content: `https://oma.wtf${card}`,
         },
         {
           name: `twitter:description`,

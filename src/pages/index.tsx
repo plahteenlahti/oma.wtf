@@ -54,9 +54,16 @@ const IndexPage: FC<PageProps<Props>> = ({
               <Icon src={app.icon} />
               <Column>
                 <H3>{app.title}</H3>
+
                 <Developer href={app.developerWebsite}>
                   {app.developer}
                 </Developer>
+
+                <BottomRow>
+                  <Version>🔨{app.version}</Version>
+                  <Stars>⭐️ {Math.round(app.score)}</Stars>
+                  <Store href={app.url}>📲 Lataa</Store>
+                </BottomRow>
               </Column>
             </App>
           ))}
@@ -145,20 +152,12 @@ const Developer = styled.a`
 const Row = styled.div`
   display: grid;
   grid-gap: 2rem;
-  grid-template-columns: repeat(1, 1fr);
   margin-top: 5rem;
   margin-bottom: 3rem;
+  grid-template-columns: repeat(1, 1fr);
 
-  @media screen and (min-width: 48em) {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  @media screen and (min-width: 30em) {
+  @media screen and (min-width: 720px) {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media screen and (max-width: 20em) {
-    grid-template-columns: repeat(1, 1fr);
   }
 `
 
@@ -180,4 +179,25 @@ const CoverContainer = styled.div`
 
 const P = styled.p`
   text-align: center;
+`
+
+const Version = styled.span`
+  font-size: 0.8rem;
+  margin-right: 1.5rem;
+`
+
+const BottomRow = styled.div`
+  margin-top: 1rem;
+`
+
+const Stars = styled.span`
+  font-size: 0.8rem;
+  margin-right: 1.5rem;
+  color: #545454;
+`
+const Store = styled.a`
+  font-size: 0.8rem;
+  margin-right: 1.5rem;
+  color: #545454;
+  text-decoration: none;
 `
