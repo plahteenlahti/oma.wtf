@@ -43,7 +43,7 @@ const IndexPage: FC<PageProps<Props>> = ({
           <H1>
             <Strong>oma</Strong>.wtf 🤔
           </H1>
-          <P>Oma-alkuisista sovelluksia, jotakin jokaiselle 📲</P>
+          <P>Oma-alkuisista sovelluksia 📲</P>
         </TextContainer>
       </CoverContainer>
 
